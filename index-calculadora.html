@@ -16,10 +16,16 @@
     <input type="number" id="altura" class="form-control" step="0.01">
     
     <a href="#" class="btn btn-primary m-2" onclick="executar()">Executar</a>
+    <a href="#" class="btn btn-secondary m-2" onclick="LIMPAR()"></a>LIMPAR</a>
   </form>
   <div id="resultado" class="alert alert-info mt-3" style="display:none;"></div>
 
   <script>
+    function LIMPAR() {
+      document.getElementById('peso').value = '';
+      document.getElementById('altura').value = '';
+      document.getElementById('resultado').style.display = 'none';
+    }
     function executar() {
       const peso = parseFloat(document.getElementById('peso').value);
       const altura = parseFloat(document.getElementById('altura').value);
